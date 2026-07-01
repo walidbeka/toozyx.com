@@ -1,0 +1,233 @@
+{
+  "site": {
+    "title": "Toozyx",
+    "tagline": "Building AI Products That Solve Real Problems",
+    "description": "Toozyx develops modern software products, AI solutions and creative technologies for businesses around the world.",
+    "url": "https://toozyx.com"
+  },
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "about": "About",
+    "contact": "Contact",
+    "blog": "Blog",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "home": {
+    "hero": {
+      "headline": "Building AI Products That Solve Real Problems",
+      "description": "Toozyx develops modern software products, AI solutions and creative technologies for businesses around the world.",
+      "exploreProducts": "Explore Products",
+      "contactUs": "Contact Us"
+    },
+    "products": {
+      "title": "Our Products",
+      "description": "Discover the digital products built by Toozyx.",
+      "tools": {
+        "name": "Toozyx Tools",
+        "description": "Free browser-based online tools.",
+        "cta": "Visit Website"
+      },
+      "agent": {
+        "name": "Toozyx Agent",
+        "description": "AI-powered customer engagement and WhatsApp automation platform.",
+        "cta": "Visit Website"
+      },
+      "media": {
+        "name": "Toozyx Media",
+        "description": "Creative production studio specializing in AI-powered video production.",
+        "cta": "Visit Website"
+      }
+    },
+    "whyToozyx": {
+      "title": "Why Toozyx",
+      "description": "What sets us apart.",
+      "innovation": {
+        "title": "Innovation",
+        "description": "We push the boundaries of what's possible with modern technology."
+      },
+      "aiFirst": {
+        "title": "AI First",
+        "description": "Artificial intelligence is at the core of everything we build."
+      },
+      "modernTech": {
+        "title": "Modern Technology",
+        "description": "We use cutting-edge technology stacks to deliver exceptional products."
+      },
+      "premiumUX": {
+        "title": "Premium User Experience",
+        "description": "Every product we build is designed with the user in mind."
+      }
+    },
+    "mission": {
+      "title": "Our Mission",
+      "description": "We believe in building useful digital products that make a difference. No exaggeration, no hype — just practical solutions powered by thoughtful engineering and artificial intelligence.",
+      "quote": "Building products that matter."
+    },
+    "articles": {
+      "title": "Latest Articles",
+      "description": "Insights and updates from the Toozyx team.",
+      "readMore": "Read More"
+    },
+    "cta": {
+      "title": "Ready to work with Toozyx?",
+      "description": "Let's build something great together.",
+      "exploreProducts": "Explore Products",
+      "contactUs": "Contact Us"
+    }
+  },
+  "products": {
+    "title": "Our Products",
+    "description": "Digital products built by Toozyx.",
+    "tools": {
+      "name": "Toozyx Tools",
+      "description": "A collection of free, browser-based online tools designed for everyday use. Fast, simple, and accessible from anywhere.",
+      "features": ["100% Free", "No Installation Required", "Works in Browser", "Regular Updates"],
+      "cta": "Visit Website"
+    },
+    "agent": {
+      "name": "Toozyx Agent",
+      "description": "An AI-powered customer engagement and WhatsApp automation platform. Streamline your communication and enhance customer experience with intelligent automation.",
+      "features": ["AI-Powered Responses", "WhatsApp Integration", "Analytics Dashboard", "Multi-language Support"],
+      "cta": "Visit Website"
+    },
+    "media": {
+      "name": "Toozyx Media",
+      "description": "A creative production studio that leverages AI to produce high-quality video content. From concept to delivery, we bring ideas to life.",
+      "features": ["AI Video Production", "Creative Direction", "Post-Production", "Content Strategy"],
+      "cta": "Visit Website"
+    }
+  },
+  "about": {
+    "title": "About Toozyx",
+    "description": "Toozyx is a technology company that builds digital products powered by artificial intelligence. We are a team of engineers, designers, and creators dedicated to solving real problems with modern technology.",
+    "mission": {
+      "title": "Our Mission",
+      "description": "To build useful, well-crafted digital products that leverage AI to solve practical problems. We focus on quality, usability, and real value — not hype."
+    },
+    "values": {
+      "title": "Our Values",
+      "items": [
+        {
+          "title": "Quality First",
+          "description": "We prioritise craftsmanship and attention to detail in everything we build."
+        },
+        {
+          "title": "User Centric",
+          "description": "Every decision starts with understanding the people who use our products."
+        },
+        {
+          "title": "AI Powered",
+          "description": "We harness artificial intelligence to create smarter, more capable products."
+        },
+        {
+          "title": "Continuous Improvement",
+          "description": "We never stop learning, iterating, and improving."
+        }
+      ]
+    },
+    "story": {
+      "title": "Our Story",
+      "description": "Founded with a vision to bridge the gap between advanced AI capabilities and practical everyday applications, Toozyx has grown into a technology company with a portfolio of products serving users worldwide. We remain focused on our core belief: technology should be useful, accessible, and well-built."
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "Get in touch with the Toozyx team.",
+    "email": "info@toozyx.com",
+    "location": "Cairo, Egypt",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Send Message",
+      "success": "Thank you for your message. We'll get back to you soon.",
+      "error": "Something went wrong. Please try again."
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Insights, updates, and stories from the Toozyx team.",
+    "readMore": "Read Article",
+    "backToBlog": "Back to Blog",
+    "noArticles": "No articles yet. Check back soon."
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: January 2025",
+    "sections": [
+      {
+        "title": "Information We Collect",
+        "content": "We collect information you provide directly to us, such as when you contact us or use our products. This may include your name, email address, and any other information you choose to share."
+      },
+      {
+        "title": "How We Use Your Information",
+        "content": "We use the information we collect to operate, maintain, and improve our products and services, to communicate with you, and to respond to your inquiries."
+      },
+      {
+        "title": "Data Security",
+        "content": "We implement appropriate technical and organisational measures to protect your personal information against unauthorised access, alteration, disclosure, or destruction."
+      },
+      {
+        "title": "Third-Party Services",
+        "content": "Our products may integrate with third-party services. We are not responsible for the privacy practices of these third parties."
+      },
+      {
+        "title": "Contact",
+        "content": "If you have any questions about this Privacy Policy, please contact us at info@toozyx.com."
+      }
+    ]
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "lastUpdated": "Last updated: January 2025",
+    "sections": [
+      {
+        "title": "Acceptance of Terms",
+        "content": "By accessing or using any Toozyx product or service, you agree to be bound by these Terms of Service."
+      },
+      {
+        "title": "Use of Services",
+        "content": "You agree to use our products and services only for lawful purposes and in accordance with these terms. You may not use our services for any illegal or unauthorised purpose."
+      },
+      {
+        "title": "Intellectual Property",
+        "content": "All content, features, and functionality of our products and services are owned by Toozyx and protected by applicable intellectual property laws."
+      },
+      {
+        "title": "Limitation of Liability",
+        "content": "Toozyx shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of our products or services."
+      },
+      {
+        "title": "Changes to Terms",
+        "content": "We reserve the right to modify these terms at any time. We will notify users of any material changes."
+      },
+      {
+        "title": "Contact",
+        "content": "If you have any questions about these Terms, please contact us at info@toozyx.com."
+      }
+    ]
+  },
+  "footer": {
+    "products": "Products",
+    "company": "Company",
+    "resources": "Resources",
+    "about": "About",
+    "contact": "Contact",
+    "blog": "Blog",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "copyright": "All rights reserved.",
+    "builtBy": "Built by Toozyx"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "The page you're looking for doesn't exist.",
+    "backHome": "Back to Home"
+  },
+  "locale": {
+    "switchTo": "العربية",
+    "label": "Language"
+  }
+}

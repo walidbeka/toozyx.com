@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply text-gray-900 bg-white antialiased;
+  }
+
+  [dir="rtl"] body {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+  }
+
+  [dir="ltr"] body {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#3D49A8] to-[#6874E8];
+  }
+
+  .gradient-bg {
+    @apply bg-gradient-to-br from-[#3D49A8] to-[#6874E8];
+  }
+
+  .gradient-bg-subtle {
+    @apply bg-gradient-to-br from-primary-50 to-white;
+  }
+
+  .card-shadow {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+  }
+
+  .card-shadow-hover {
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+
+  .card-shadow-hover:hover {
+    box-shadow: 0 10px 40px rgba(61, 73, 168, 0.1), 0 4px 12px rgba(0, 0, 0, 0.05);
+    transform: translateY(-2px);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

@@ -1,6 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import Section from "@/components/Section";
 import Container from "@/components/Container";
+import { siteConfig } from "@/config/site";
 import type { Metadata } from "next";
 
 interface PrivacyPageProps {
@@ -12,11 +13,32 @@ export async function generateMetadata({
 }: PrivacyPageProps): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "privacy" });
+  const isAr = locale === "ar";
+  const title = t("title");
+  const suffix = isAr ? " | توزيكس" : " | Toozyx";
 
   return {
-    title: t("title"),
-    alternates: { canonical: `/${locale}/privacy` },
-    openGraph: { title: t("title") },
+    title: title + suffix,
+    description: isAr ? "سياسة الخصوصية لشركة توزيكس" : "Toozyx Privacy Policy — how we collect, use, and protect your information.",
+    alternates: {
+      canonical: `https://toozyx.com/${locale}/privacy`,
+      languages: { en: "https://toozyx.com/en/privacy", ar: "https://toozyx.com/ar/privacy" },
+    },
+    openGraph: {
+      title: title + suffix,
+      description: isAr ? "سياسة الخصوصية لشركة توزيكس" : "Toozyx Privacy Policy — how we collect, use, and protect your information.",
+      url: `https://toozyx.com/${locale}/privacy`,
+      siteName: "Toozyx",
+      locale: isAr ? "ar_SA" : "en_US",
+      type: "website",
+      images: [{ url: siteConfig.ogImage, width: 1200, height: 630, alt: siteConfig.ogImageAlt }],
+    },
+    twitter: {
+      card: "summary",
+      title: title + suffix,
+      site: siteConfig.twitterHandle,
+    },
+    robots: { index: false, follow: true },
   };
 }
 

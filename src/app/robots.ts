@@ -6,7 +6,9 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
       disallow: "/api/",
+      crawlDelay: 10,
     },
     sitemap: "https://toozyx.com/sitemap.xml",
+    host: "https://toozyx.com",
   };
 }

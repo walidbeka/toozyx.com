@@ -1,6 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import Section from "@/components/Section";
 import Container from "@/components/Container";
+import { siteConfig } from "@/config/site";
 import type { Metadata } from "next";
 
 interface TermsPageProps {
@@ -12,11 +13,32 @@ export async function generateMetadata({
 }: TermsPageProps): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "terms" });
+  const isAr = locale === "ar";
+  const title = t("title");
+  const suffix = isAr ? " | توزيكس" : " | Toozyx";
 
   return {
-    title: t("title"),
-    alternates: { canonical: `/${locale}/terms` },
-    openGraph: { title: t("title") },
+    title: title + suffix,
+    description: isAr ? "شروط خدمة توزيكس" : "Toozyx Terms of Service — rules and guidelines for using Toozyx products and services.",
+    alternates: {
+      canonical: `https://toozyx.com/${locale}/terms`,
+      languages: { en: "https://toozyx.com/en/terms", ar: "https://toozyx.com/ar/terms" },
+    },
+    openGraph: {
+      title: title + suffix,
+      description: isAr ? "شروط خدمة توزيكس" : "Toozyx Terms of Service — rules and guidelines for using Toozyx products and services.",
+      url: `https://toozyx.com/${locale}/terms`,
+      siteName: "Toozyx",
+      locale: isAr ? "ar_SA" : "en_US",
+      type: "website",
+      images: [{ url: siteConfig.ogImage, width: 1200, height: 630, alt: siteConfig.ogImageAlt }],
+    },
+    twitter: {
+      card: "summary",
+      title: title + suffix,
+      site: siteConfig.twitterHandle,
+    },
+    robots: { index: false, follow: true },
   };
 }
 

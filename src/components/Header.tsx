@@ -27,7 +27,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-16 sm:h-20">
           <Logo locale={locale} />
 
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-8" aria-label="Main navigation">
             {mainNavItems.map((item) => (
               <Link
                 key={item.path}
@@ -53,11 +53,11 @@ export default function Header() {
             aria-label="Toggle menu"
           >
             {mobileOpen ? (
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
                 <path d="M18 6L6 18M6 6l12 12" />
               </svg>
             ) : (
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
                 <path d="M3 12h18M3 6h18M3 18h18" />
               </svg>
             )}
@@ -66,7 +66,7 @@ export default function Header() {
 
         {mobileOpen && (
           <div className="md:hidden border-t border-gray-100 py-4 pb-6">
-            <nav className="flex flex-col gap-3">
+            <nav className="flex flex-col gap-3" aria-label="Mobile navigation">
               {mainNavItems.map((item) => (
                 <Link
                   key={item.path}

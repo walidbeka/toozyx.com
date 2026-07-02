@@ -12,20 +12,21 @@ const staticRoutes = [
   "/terms",
 ];
 
-const blogPosts = [
-  "introducing-toozyx-agent",
-  "why-ai-first-development-matters",
-  "technology-behind-toozyx-tools",
-];
+const blogPosts: Record<string, string> = {
+  "automating-customer-conversations": "2025-01-15",
+  "reducing-operational-friction": "2025-02-01",
+  "building-practical-business-tools": "2025-03-10",
+};
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
+  const now = new Date();
 
   for (const locale of locales) {
     for (const route of staticRoutes) {
       entries.push({
         url: `https://toozyx.com/${locale}${route}`,
-        lastModified: new Date("2025-03-10"),
+        lastModified: now,
         changeFrequency: route === "" ? "weekly" : "monthly",
         priority: route === "" ? 1.0 : 0.8,
         alternates: {
@@ -37,10 +38,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       });
     }
 
-    for (const slug of blogPosts) {
+    for (const [slug, date] of Object.entries(blogPosts)) {
       entries.push({
         url: `https://toozyx.com/${locale}/blog/${slug}`,
-        lastModified: new Date("2025-03-10"),
+        lastModified: new Date(date),
         changeFrequency: "monthly",
         priority: 0.6,
         alternates: {

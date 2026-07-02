@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "Toozyx",
     short_name: "Toozyx",
     description:
-      "Toozyx develops modern software products, AI solutions and creative technologies for businesses around the world.",
+      "Toozyx helps businesses build better operating systems. We study how businesses work, identify bottlenecks, and design technology that improves clarity, control, and growth.",
     start_url: "/en",
     display: "standalone",
     background_color: "#ffffff",

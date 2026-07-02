@@ -4,8 +4,8 @@
   <rect x="60" y="60" width="140" height="140" rx="28" fill="url(#g)"/>
   <path d="M100 200V100L160 200L220 100V200" stroke="white" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
   <text x="240" y="175" font-family="Inter, sans-serif" font-size="80" font-weight="700" fill="#111827">Toozyx</text>
-  <text x="60" y="290" font-family="Inter, sans-serif" font-size="36" font-weight="500" fill="#6B7280">Building AI Products That Solve Real Problems</text>
-  <text x="60" y="350" font-family="Inter, sans-serif" font-size="24" font-weight="400" fill="#9CA3AF">Technology Company · AI Solutions · Digital Products</text>
+  <text x="60" y="290" font-family="Inter, sans-serif" font-size="36" font-weight="500" fill="#6B7280">Technology That Makes Business Simpler</text>
+  <text x="60" y="350" font-family="Inter, sans-serif" font-size="24" font-weight="400" fill="#9CA3AF">Technology Company · Business Solutions · Digital Products</text>
   <defs>
     <linearGradient id="g" x1="0" y1="0" x2="140" y2="140" gradientUnits="userSpaceOnUse">
       <stop stop-color="#3D49A8"/>

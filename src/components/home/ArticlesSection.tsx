@@ -5,25 +5,25 @@ import BlogCard from "@/components/BlogCard";
 
 const placeholderArticles = [
   {
-    title: "Introducing Toozyx Agent: AI-Powered WhatsApp Automation",
+    title: "How Automating Customer Conversations Helps Businesses Grow",
     description:
-      "We are excited to introduce Toozyx Agent — a platform designed to transform how businesses engage with customers through intelligent WhatsApp automation.",
+      "Discover how businesses are using conversation automation to respond faster, capture more leads, and reduce the workload on support teams.",
     date: "2025-01-15",
-    slug: "introducing-toozyx-agent",
+    slug: "automating-customer-conversations",
   },
   {
-    title: "Why AI-First Development Matters",
+    title: "Reducing Operational Friction with Modern Technology",
     description:
-      "An exploration of how building with an AI-first approach leads to more capable, adaptable, and intelligent products.",
+      "An exploration of how disconnected tools and manual workflows create hidden costs — and how the right technology eliminates them.",
     date: "2025-02-01",
-    slug: "why-ai-first-development-matters",
+    slug: "reducing-operational-friction",
   },
   {
-    title: "The Technology Behind Toozyx Tools",
+    title: "Building Practical Business Tools: A Technology Approach",
     description:
-      "A behind-the-scenes look at the modern web technologies that power our free online toolset.",
+      "A look at the engineering principles behind building tools that are fast, reliable, and genuinely useful for everyday business tasks.",
     date: "2025-03-10",
-    slug: "technology-behind-toozyx-tools",
+    slug: "building-practical-business-tools",
   },
 ];
 

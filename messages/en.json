@@ -1,8 +1,8 @@
 {
   "site": {
     "title": "Toozyx",
-    "tagline": "Building AI Products That Solve Real Problems",
-    "description": "Toozyx develops modern software products, AI solutions and creative technologies for businesses around the world.",
+    "tagline": "Better Systems. Better Decisions. Better Growth.",
+    "description": "Toozyx helps companies build better operating systems. We study how organisations work, identify bottlenecks, and design solutions that improve clarity, control, and growth.",
     "url": "https://toozyx.com"
   },
   "nav": {
@@ -16,95 +16,272 @@
   },
   "home": {
     "hero": {
-      "headline": "Building AI Products That Solve Real Problems",
-      "description": "Toozyx develops modern software products, AI solutions and creative technologies for businesses around the world.",
-      "exploreProducts": "Explore Products",
-      "contactUs": "Contact Us"
+      "headline": "Better Systems. Better Decisions. Better Growth.",
+      "description": "Most organisations lose time to hidden inefficiencies — manual workflows, disconnected tools, and slow processes. Toozyx helps you see those bottlenecks, design better systems, and gain clarity, control, and measurable growth.",
+      "exploreProducts": "Explore the Ecosystem",
+      "contactUs": "Talk to Us"
     },
     "products": {
       "title": "Our Products",
-      "description": "Discover the digital products built by Toozyx.",
+      "description": "Three products. One mission. Built to work together.",
       "tools": {
         "name": "Toozyx Tools",
-        "description": "Free browser-based online tools.",
+        "description": "Small everyday tasks eat up hours every week. Toozyx Tools removes those obstacles with instant browser-based tools — no sign-up, no setup, no delay.",
         "cta": "Visit Website"
       },
       "agent": {
         "name": "Toozyx Agent",
-        "description": "AI-powered customer engagement and WhatsApp automation platform.",
+        "description": "Customer messages pile up and leads go unanswered. Toozyx Agent automates conversations so every customer gets a response and your team focuses on what matters.",
         "cta": "Visit Website"
       },
       "media": {
         "name": "Toozyx Media",
-        "description": "Creative production studio specializing in AI-powered video production.",
+        "description": "Professional video is expensive and slow to produce. Toozyx Media helps you create brand content faster — from concept to delivery, without the complexity.",
         "cta": "Visit Website"
       }
     },
     "whyToozyx": {
-      "title": "Why Toozyx",
-      "description": "What sets us apart.",
+    "title": "Why Toozyx",
+    "description": "Companies lose time to repetitive work, disconnected tools, and inefficient processes. Toozyx exists to solve that.",
       "innovation": {
-        "title": "Innovation",
-        "description": "We push the boundaries of what's possible with modern technology."
+        "title": "Eliminate Repetition",
+        "description": "Thousands of hours are wasted on manual tasks and repetitive workflows. We automate the routine so teams can focus on strategic work."
       },
       "aiFirst": {
-        "title": "AI First",
-        "description": "Artificial intelligence is at the core of everything we build."
+        "title": "Simplify Operations",
+        "description": "Disconnected tools create operational friction. Our products work together to reduce complexity, not add to it."
       },
       "modernTech": {
-        "title": "Modern Technology",
-        "description": "We use cutting-edge technology stacks to deliver exceptional products."
+        "title": "Practical by Design",
+        "description": "Every product solves a real problem. We never build features because competitors have them. If it does not create value, it does not exist."
       },
       "premiumUX": {
-        "title": "Premium User Experience",
-        "description": "Every product we build is designed with the user in mind."
+        "title": "Built for Growth",
+        "description": "When operations run smoothly, companies grow faster. Every Toozyx product is designed to help teams become more efficient, productive, and profitable."
       }
+    },
+    "principles": {
+      "title": "Our Principles",
+      "description": "Six guiding ideas that shape every decision we make.",
+      "items": [
+        {
+          "title": "Keep It Simple",
+          "description": "Complexity is the enemy of progress. Every solution should be simpler than the problem it solves."
+        },
+        {
+          "title": "Measure Everything",
+          "description": "What gets measured gets improved. We track what matters and ignore the rest."
+        },
+        {
+          "title": "Technology Supports People",
+          "description": "Automation exists to free people up, not replace them. The best systems amplify human potential."
+        },
+        {
+          "title": "Remove Unnecessary Work",
+          "description": "Eliminate before you automate. If a task does not need to exist, remove it rather than optimise it."
+        },
+        {
+          "title": "Connect Systems, Not Silos",
+          "description": "Disconnected tools create friction. Every system should talk to every other system."
+        },
+        {
+          "title": "Improve Continuously",
+          "description": "Done is better than perfect — but better is always possible. We iterate, measure, and improve."
+        }
+      ]
+    },
+    "howWeSolve": {
+      "title": "How We Solve Business Problems",
+      "description": "We do not start with technology. We start by understanding your business.",
+      "steps": [
+        {
+          "number": "01",
+          "title": "Understand Your Business",
+          "description": "We study how your business operates — your workflows, your tools, your team structure, and your biggest bottlenecks."
+        },
+        {
+          "number": "02",
+          "title": "Identify Bottlenecks",
+          "description": "We find the places where time is wasted, tasks are repeated, and processes break down."
+        },
+        {
+          "number": "03",
+          "title": "Design the Right System",
+          "description": "We design a system that removes friction, connects your workflows, and gives you visibility into every part of your operation."
+        },
+        {
+          "number": "04",
+          "title": "Connect Workflows and Data",
+          "description": "We connect your people, processes, and tools so information flows naturally and nothing falls through the cracks."
+        },
+        {
+          "number": "05",
+          "title": "Measure, Improve and Grow",
+          "description": "We help you track performance, identify what works, and continuously improve — so your business grows with confidence."
+        }
+      ]
+    },
+    "trust": {
+      "title": "Why Businesses Trust Toozyx",
+      "description": "We earn trust by delivering what we promise — practical solutions that improve how organisations operate.",
+      "pillars": [
+        {
+          "title": "Business-First Thinking",
+          "description": "Every recommendation starts with understanding how the organisation operates. We never recommend solutions before we understand the problem."
+        },
+        {
+          "title": "Systems Built Around Your Business",
+          "description": "Solutions are designed around your workflows and operational goals — not generic software that forces you to adapt."
+        },
+        {
+          "title": "Measurable Results",
+          "description": "Every solution should improve visibility, efficiency or decision-making. If it cannot be measured, it is not worth implementing."
+        },
+        {
+          "title": "Long-Term Partnership",
+          "description": "We focus on sustainable operational improvement, not one-time implementations. Our success is measured by your long-term results."
+        }
+      ]
     },
     "mission": {
       "title": "Our Mission",
-      "description": "We believe in building useful digital products that make a difference. No exaggeration, no hype — just practical solutions powered by thoughtful engineering and artificial intelligence.",
-      "quote": "Building products that matter."
+      "description": "We believe organisations should spend less time fighting inefficiency and more time growing. No exaggeration, no hype — just practical solutions that create measurable value.",
+      "quote": "Better operations. Better growth."
+    },
+    "metrics": {
+      "title": "How We Measure Success",
+      "description": "We measure what matters to your organisation. Not software features — actual operational outcomes.",
+      "items": [
+        {
+          "title": "Less Wasted Time",
+          "description": "Hours saved on manual tasks, faster response times, shorter approval cycles."
+        },
+        {
+          "title": "Better Visibility",
+          "description": "Clear dashboards, real-time data, complete visibility into every part of the operation."
+        },
+        {
+          "title": "Faster Workflows",
+          "description": "Processes that used to take days now take hours. Tasks flow naturally between teams and tools."
+        },
+        {
+          "title": "Higher Efficiency",
+          "description": "Lower operational costs, fewer errors, less rework. Teams accomplish more with less effort."
+        },
+        {
+          "title": "Better Decisions",
+          "description": "Decision makers have the data they need, when they need it — without chasing spreadsheets."
+        }
+      ],
+      "note": "We do not measure success by features shipped. We measure it by problems solved."
+    },
+    "security": {
+      "title": "Security & Reliability",
+      "description": "Trust is built on reliability. Every Toozyx solution follows the same standards.",
+      "items": [
+        {
+          "title": "Secure Integrations",
+          "description": "Every connection between systems is encrypted and audited. Data moves safely between tools."
+        },
+        {
+          "title": "Reliable Architecture",
+          "description": "Systems are designed for uptime and redundancy. Your operations keep running when it matters most."
+        },
+        {
+          "title": "Privacy-First Mindset",
+          "description": "We collect only what is necessary. Your data belongs to you — never shared, never sold."
+        },
+        {
+          "title": "Scalable Systems",
+          "description": "Solutions grow with your organisation. What works for ten users works for ten thousand."
+        },
+        {
+          "title": "Professional Implementation",
+          "description": "Every deployment follows a structured process. No shortcuts. No surprises."
+        }
+      ]
     },
     "articles": {
-      "title": "Latest Articles",
-      "description": "Insights and updates from the Toozyx team.",
-      "readMore": "Read More"
+      "title": "Knowledge Hub",
+      "description": "Practical insights on business systems, operations, productivity, and decision making.",
+      "readMore": "Read Article"
     },
     "cta": {
-      "title": "Ready to work with Toozyx?",
-      "description": "Let's build something great together.",
-      "exploreProducts": "Explore Products",
-      "contactUs": "Contact Us"
+      "title": "Ready to make your operations run smoother?",
+      "description": "Tell us about your challenges. We will help you find the right solution.",
+      "exploreProducts": "Explore Our Products",
+      "contactUs": "Talk to Us"
     }
   },
   "products": {
     "title": "Our Products",
-    "description": "Digital products built by Toozyx.",
+    "description": "One company. One mission. Multiple solutions working together.",
+    "ecosystemIntro": {
+      "headline": "One Platform. Built for Work.",
+      "description": "Most companies run on disconnected tools that do not talk to each other. Toozyx brings productivity, communication, and creative production together — designed to help teams operate more efficiently."
+    },
     "tools": {
       "name": "Toozyx Tools",
-      "description": "A collection of free, browser-based online tools designed for everyday use. Fast, simple, and accessible from anywhere.",
-      "features": ["100% Free", "No Installation Required", "Works in Browser", "Regular Updates"],
+      "role": "Remove small daily obstacles.",
+      "outcome": "Save time.",
+      "description": "Small everyday tasks — calculations, conversions, formatting — add up to hours of lost time every week. Toozyx Tools removes those obstacles with instant, browser-based solutions. No sign-up. No setup. No complexity.",
+      "features": ["Free to Use", "Works in Any Browser", "No Installation Needed", "Regular Updates"],
       "cta": "Visit Website"
     },
     "agent": {
       "name": "Toozyx Agent",
-      "description": "An AI-powered customer engagement and WhatsApp automation platform. Streamline your communication and enhance customer experience with intelligent automation.",
-      "features": ["AI-Powered Responses", "WhatsApp Integration", "Analytics Dashboard", "Multi-language Support"],
+      "role": "Automate customer communication.",
+      "outcome": "Improve operations.",
+      "description": "Customer messages pile up. Leads slip through the cracks. Your support team spends hours answering the same questions. Toozyx Agent automates conversations so nothing gets missed and your team focuses on high-value work.",
+      "features": ["Conversation Automation", "WhatsApp Integration", "Performance Analytics", "Multi-language Support"],
       "cta": "Visit Website"
     },
     "media": {
       "name": "Toozyx Media",
-      "description": "A creative production studio that leverages AI to produce high-quality video content. From concept to delivery, we bring ideas to life.",
-      "features": ["AI Video Production", "Creative Direction", "Post-Production", "Content Strategy"],
+      "role": "Help businesses communicate visually.",
+      "outcome": "Increase brand impact.",
+      "description": "Professional video production is slow, expensive, and hard to manage. Toozyx Media helps businesses create compelling brand content efficiently — from commercial production to motion graphics and brand storytelling.",
+      "features": ["Commercial Production", "Creative Direction", "Post-Production", "Content Strategy"],
       "cta": "Visit Website"
-    }
+    },
+    "whyEcosystem": {
+      "title": "Connected Products. Better Results.",
+      "description": "When products are built to work together, every tool becomes more valuable. Here is why Toozyx builds connected products instead of isolated software.",
+      "items": [
+        {
+          "title": "Less Complexity",
+          "description": "One ecosystem replaces multiple logins, dashboards, and workflows. Teams spend less time managing tools and more time doing real work."
+        },
+        {
+          "title": "Better Workflows",
+          "description": "Data moves naturally between products. A lead captured in Agent can trigger a task in Tools — no manual transfer needed."
+        },
+        {
+          "title": "Connected Experiences",
+          "description": "Every Toozyx product shares the same design language and user experience. Once a user knows one product, they intuitively understand the rest."
+        },
+        {
+          "title": "Consistent Quality",
+          "description": "Every product in the ecosystem meets the same standards: fast, reliable, professional, and built with purpose."
+        }
+      ]
+    },
+    "philosophy": {
+      "title": "Systems Should Make Work Simpler.",
+      "description": "Every company runs on a set of systems — whether they realise it or not. When those systems are disconnected, work slows down, mistakes multiply, and growth stalls. Toozyx builds products that connect the dots: automating repetitive work, improving communication, and giving teams clarity over their operations. Every product we build starts with one question: does this make the customer's operation run better?"
+    },
+    "futureVision": {
+      "title": "Building for the Long Term",
+      "description": "Toozyx is building toward a future where every organisation — regardless of size — has access to an operating system that gives them clarity, control, and confidence. Our long-term vision is a complete set of connected products that work together to help teams measure performance, improve continuously, and grow sustainably."
+    },
+    "aboutLink": "Learn more about Toozyx"
   },
   "about": {
     "title": "About Toozyx",
-    "description": "Toozyx is a technology company that builds digital products powered by artificial intelligence. We are a team of engineers, designers, and creators dedicated to solving real problems with modern technology.",
+    "description": "Toozyx is a business systems company. We study how businesses operate, identify bottlenecks, and design practical solutions that improve clarity, control, and efficiency.",
     "mission": {
       "title": "Our Mission",
-      "description": "To build useful, well-crafted digital products that leverage AI to solve practical problems. We focus on quality, usability, and real value — not hype."
+      "description": "To help companies build better operating systems — so they can operate with clarity, make better decisions, and grow with confidence."
     },
     "values": {
       "title": "Our Values",
@@ -118,8 +295,8 @@
           "description": "Every decision starts with understanding the people who use our products."
         },
         {
-          "title": "AI Powered",
-          "description": "We harness artificial intelligence to create smarter, more capable products."
+          "title": "Practical Innovation",
+          "description": "We solve real problems with thoughtful technology. Innovation for its own sake has no place here."
         },
         {
           "title": "Continuous Improvement",
@@ -129,12 +306,13 @@
     },
     "story": {
       "title": "Our Story",
-      "description": "Founded with a vision to bridge the gap between advanced AI capabilities and practical everyday applications, Toozyx has grown into a technology company with a portfolio of products serving users worldwide. We remain focused on our core belief: technology should be useful, accessible, and well-built."
-    }
+      "description": "Most businesses lose time to the same problems: manual processes, disconnected tools, and operational friction that nobody has time to fix. Toozyx was founded to solve those problems — not by selling software, but by understanding how businesses actually work and designing systems that make them run better. Today, Toozyx is a growing ecosystem of products and solutions serving businesses worldwide. We remain focused on one thing: helping businesses operate with clarity, control, and confidence."
+    },
+    "cta": "Get in touch"
   },
   "contact": {
     "title": "Contact Us",
-    "description": "Get in touch with the Toozyx team.",
+    "description": "Tell us about your operational challenges. We will help you find the right solution.",
     "email": "info@toozyx.com",
     "location": "Cairo, Egypt",
     "form": {
@@ -142,13 +320,13 @@
       "email": "Email",
       "message": "Message",
       "submit": "Send Message",
-      "success": "Thank you for your message. We'll get back to you soon.",
+      "success": "Thank you for your message. We will get back to you soon.",
       "error": "Something went wrong. Please try again."
     }
   },
   "blog": {
     "title": "Blog",
-    "description": "Insights, updates, and stories from the Toozyx team.",
+    "description": "A knowledge hub for founders and teams looking to improve their operating systems through better workflows, automation, and decision making.",
     "readMore": "Read Article",
     "backToBlog": "Back to Blog",
     "noArticles": "No articles yet. Check back soon."
@@ -210,7 +388,7 @@
     ]
   },
   "footer": {
-    "products": "Products",
+    "allProducts": "All Products",
     "company": "Company",
     "resources": "Resources",
     "about": "About",
@@ -223,7 +401,7 @@
   },
   "notFound": {
     "title": "Page Not Found",
-    "description": "The page you're looking for doesn't exist.",
+    "description": "The page you are looking for does not exist.",
     "backHome": "Back to Home"
   },
   "locale": {

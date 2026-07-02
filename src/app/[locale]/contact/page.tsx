@@ -3,6 +3,7 @@ import Section from "@/components/Section";
 import Container from "@/components/Container";
 import Card from "@/components/Card";
 import ContactForm from "./ContactForm";
+import { siteConfig } from "@/config/site";
 import type { Metadata } from "next";
 
 interface ContactPageProps {
@@ -14,15 +15,34 @@ export async function generateMetadata({
 }: ContactPageProps): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "contact" });
+  const isAr = locale === "ar";
+  const title = t("title");
+  const suffix = isAr ? " | توزيكس" : " | Toozyx";
 
   return {
-    title: t("title"),
+    title: title + suffix,
     description: t("description"),
-    alternates: { canonical: `/${locale}/contact` },
-    openGraph: {
-      title: t("title"),
-      description: t("description"),
+    alternates: {
+      canonical: `https://toozyx.com/${locale}/contact`,
+      languages: { en: "https://toozyx.com/en/contact", ar: "https://toozyx.com/ar/contact" },
     },
+    openGraph: {
+      title: title + suffix,
+      description: t("description"),
+      url: `https://toozyx.com/${locale}/contact`,
+      siteName: "Toozyx",
+      locale: isAr ? "ar_SA" : "en_US",
+      type: "website",
+      images: [{ url: siteConfig.ogImage, width: 1200, height: 630, alt: siteConfig.ogImageAlt }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: title + suffix,
+      description: t("description"),
+      images: [siteConfig.ogImage],
+      site: siteConfig.twitterHandle,
+    },
+    robots: { index: true, follow: true },
   };
 }
 
@@ -42,6 +62,28 @@ export default async function ContactPage({ params }: ContactPageProps) {
               { "@type": "ListItem", position: 1, name: "Home", item: `https://toozyx.com/${locale}` },
               { "@type": "ListItem", position: 2, name: t("title"), item: `https://toozyx.com/${locale}/contact` },
             ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            name: t("title"),
+            description: t("description"),
+            url: `https://toozyx.com/${locale}/contact`,
+            mainEntity: {
+              "@type": "Organization",
+              name: "Toozyx",
+              contactPoint: {
+                "@type": "ContactPoint",
+                email: "info@toozyx.com",
+                contactType: "sales",
+                availableLanguage: ["English", "Arabic"],
+              },
+            },
           }),
         }}
       />

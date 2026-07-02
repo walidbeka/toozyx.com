@@ -21,7 +21,7 @@ export default function Hero({ locale }: HeroProps) {
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-50 border border-primary-100 mb-8">
             <span className="w-2 h-2 rounded-full bg-[#3D49A8] animate-pulse" />
             <span className="text-xs font-medium text-[#3D49A8]">
-              Toozyx — Technology Company
+              Toozyx — Business Systems Company
             </span>
           </div>
 

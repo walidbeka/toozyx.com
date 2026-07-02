@@ -12,20 +12,29 @@ export default function Footer({ locale = "en" }: FooterProps) {
   const t = useTranslations("footer");
 
   const footerLinks = {
-    products: [
-      { label: "Toozyx Tools", href: "https://tools.toozyx.com", external: true },
-      { label: "Toozyx Agent", href: "https://agent.toozyx.com", external: true },
-      { label: "Toozyx Media", href: "https://media.toozyx.com", external: true },
-    ],
-    company: [
-      { label: t("about"), href: `/${locale}/about`, external: false },
-      { label: t("contact"), href: `/${locale}/contact`, external: false },
-      { label: t("blog"), href: `/${locale}/blog`, external: false },
-    ],
-    resources: [
-      { label: t("privacy"), href: `/${locale}/privacy`, external: false },
-      { label: t("terms"), href: `/${locale}/terms`, external: false },
-    ],
+    products: {
+      heading: t("allProducts"),
+      links: [
+        { label: "Toozyx Tools", href: "https://tools.toozyx.com", external: true },
+        { label: "Toozyx Agent", href: "https://agent.toozyx.com", external: true },
+        { label: "Toozyx Media", href: "https://media.toozyx.com", external: true },
+      ],
+    },
+    company: {
+      heading: t("company"),
+      links: [
+        { label: t("about"), href: `/${locale}/about`, external: false },
+        { label: t("contact"), href: `/${locale}/contact`, external: false },
+        { label: t("blog"), href: `/${locale}/blog`, external: false },
+      ],
+    },
+    resources: {
+      heading: t("resources"),
+      links: [
+        { label: t("privacy"), href: `/${locale}/privacy`, external: false },
+        { label: t("terms"), href: `/${locale}/terms`, external: false },
+      ],
+    },
   };
 
   return (
@@ -35,18 +44,18 @@ export default function Footer({ locale = "en" }: FooterProps) {
           <div className="col-span-2 md:col-span-1">
             <Logo locale={locale} className="mb-4" />
             <p className="text-sm text-gray-500 mt-3 max-w-xs">
-              AI-powered digital products for modern businesses.
+              Products for modern teams.
             </p>
             <SocialLinks className="mt-6" />
           </div>
 
-          {Object.entries(footerLinks).map(([key, links]) => (
+          {Object.entries(footerLinks).map(([key, group]) => (
             <div key={key}>
               <h3 className="text-sm font-semibold text-gray-900 mb-4">
-                {t(key)}
+                {group.heading}
               </h3>
               <ul className="space-y-3">
-                {links.map((link) => (
+                {group.links.map((link) => (
                   <li key={link.label}>
                     {link.external ? (
                       <a

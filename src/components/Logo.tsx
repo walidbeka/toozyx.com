@@ -9,6 +9,7 @@ export default function Logo({ locale, className = "" }: LogoProps) {
   return (
     <Link
       href={`/${locale}`}
+      aria-label="Toozyx — back to homepage"
       className={`flex items-center gap-2 ${className}`}
     >
       <svg
@@ -18,6 +19,7 @@ export default function Logo({ locale, className = "" }: LogoProps) {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         className="flex-shrink-0"
+        aria-hidden="true"
       >
         <rect width="32" height="32" rx="8" fill="url(#logo-gradient)" />
         <path

@@ -2,6 +2,7 @@ import { getTranslations } from "next-intl/server";
 import Link from "next/link";
 import Section from "@/components/Section";
 import Container from "@/components/Container";
+import { siteConfig } from "@/config/site";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
@@ -10,23 +11,23 @@ interface ArticlePageProps {
 }
 
 const articles: Record<string, { title: string; content: string; date: string }> = {
-  "introducing-toozyx-agent": {
-    title: "Introducing Toozyx Agent: AI-Powered WhatsApp Automation",
+  "automating-customer-conversations": {
+    title: "How Automating Customer Conversations Helps Businesses Grow",
     date: "2025-01-15",
     content:
-      "We are excited to introduce Toozyx Agent — a platform designed to transform how businesses engage with customers through intelligent WhatsApp automation. Built with cutting-edge AI technology, Toozyx Agent enables businesses to automate customer conversations, provide instant responses, and gather valuable insights from every interaction. The platform integrates seamlessly with WhatsApp, making it easy to reach customers on the messaging platform they already use. With features like intelligent response routing, multi-language support, and detailed analytics, Toozyx Agent helps businesses of all sizes deliver exceptional customer experiences at scale.",
+      "Every business faces the same challenge: customers expect fast, helpful responses, but support teams are limited by time and headcount. The result is slow replies, missed leads, and burnt-out teams. Conversation automation solves this by handling repetitive inquiries automatically — freeing human agents to focus on complex, high-value conversations. Toozyx Agent helps businesses set up automated responses, capture leads outside business hours, and maintain consistent communication across every channel. The outcome is faster response times, higher customer satisfaction, and a support team that can focus on what actually needs a human touch.",
   },
-  "why-ai-first-development-matters": {
-    title: "Why AI-First Development Matters",
+  "reducing-operational-friction": {
+    title: "Reducing Operational Friction with Modern Technology",
     date: "2025-02-01",
     content:
-      "An exploration of how building with an AI-first approach leads to more capable, adaptable, and intelligent products. At Toozyx, we believe that AI is not just a feature — it is a fundamental shift in how software should be built. An AI-first approach means designing products with AI capabilities at their core, rather than adding AI as an afterthought. This approach enables products that learn from user behavior, adapt to changing needs, and provide increasingly personalised experiences over time. From natural language processing to predictive analytics, AI-first development opens up possibilities that were previously out of reach.",
+      "Every business accumulates operational friction over time: manual data entry, disconnected tools, repeated processes that no one has time to improve. This friction slows everything down and costs more than most companies realise. The solution is not necessarily more software — it is better software that integrates naturally into existing workflows. Toozyx builds products that reduce friction by automating repetitive tasks, connecting disconnected systems, and simplifying complex processes. When technology removes obstacles instead of creating them, teams spend less time fighting their tools and more time doing their best work.",
   },
-  "technology-behind-toozyx-tools": {
-    title: "The Technology Behind Toozyx Tools",
+  "building-practical-business-tools": {
+    title: "Building Practical Business Tools: A Technology Approach",
     date: "2025-03-10",
     content:
-      "A behind-the-scenes look at the modern web technologies that power our free online toolset. Toozyx Tools is built using modern web technologies that prioritise speed, reliability, and accessibility. Every tool is designed to work directly in the browser without requiring installations or downloads. The platform leverages serverless architecture for scalability, progressive web app technologies for offline capabilities, and responsive design principles to ensure a consistent experience across devices. We continuously update our tools based on user feedback and emerging technologies.",
+      "Too many tools are built to impress rather than to help. At Toozyx, we believe the best tool is the one that solves a problem without requiring the user to learn anything new. That is why every Toozyx Tool is designed around a single principle: deliver instant value. No sign-up forms. No onboarding tutorials. No unnecessary features. Just a clean interface that does exactly what it promises. This approach requires discipline — it means saying no to features that look impressive but add complexity. The result is a collection of tools that professionals actually enjoy using because they respect the user's time.",
   },
 };
 
@@ -41,21 +42,36 @@ export async function generateMetadata({
     return { title: t("title") };
   }
 
+  const isAr = locale === "ar";
+
   return {
     title: article.title,
     description: article.content.slice(0, 160),
-    alternates: { canonical: `/${locale}/blog/${slug}` },
+    alternates: {
+      canonical: `https://toozyx.com/${locale}/blog/${slug}`,
+      languages: {
+        en: `https://toozyx.com/en/blog/${slug}`,
+        ar: `https://toozyx.com/ar/blog/${slug}`,
+      },
+    },
     openGraph: {
       title: article.title,
       description: article.content.slice(0, 160),
+      url: `https://toozyx.com/${locale}/blog/${slug}`,
+      siteName: "Toozyx",
+      locale: isAr ? "ar_SA" : "en_US",
       type: "article",
       publishedTime: article.date,
+      images: [{ url: siteConfig.ogImage, width: 1200, height: 630, alt: siteConfig.ogImageAlt }],
     },
     twitter: {
       card: "summary_large_image",
       title: article.title,
       description: article.content.slice(0, 160),
+      images: [siteConfig.ogImage],
+      site: siteConfig.twitterHandle,
     },
+    robots: { index: true, follow: true },
   };
 }
 
@@ -85,10 +101,22 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             "@context": "https://schema.org",
             "@type": "Article",
             headline: article.title,
+            description: article.content.slice(0, 160),
             datePublished: article.date,
+            dateModified: article.date,
             author: {
               "@type": "Organization",
               name: "Toozyx",
+              url: "https://toozyx.com",
+            },
+            publisher: {
+              "@type": "Organization",
+              name: "Toozyx",
+              logo: { "@type": "ImageObject", url: "https://toozyx.com/icon.png" },
+            },
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": `https://toozyx.com/${locale}/blog/${slug}`,
             },
           }),
         }}

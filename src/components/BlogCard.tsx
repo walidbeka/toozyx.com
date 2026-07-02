@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import Card from "./Card";
+import { trackBlogOpen } from "@/lib/analytics";
 
 interface BlogCardProps {
   title: string;
@@ -30,6 +33,7 @@ export default function BlogCard({
         </p>
         <Link
           href={`/${locale}/blog/${slug}`}
+          onClick={() => trackBlogOpen(title)}
           className="inline-flex items-center text-sm font-medium text-[#3D49A8] hover:text-[#6874E8] transition-colors"
         >
           {readMore}

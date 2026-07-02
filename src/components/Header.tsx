@@ -8,6 +8,7 @@ import { mainNavItems } from "@/config/navigation";
 import Container from "./Container";
 import Logo from "./Logo";
 import LocaleSwitcher from "./LocaleSwitcher";
+import { trackNavigation } from "@/lib/analytics";
 
 export default function Header() {
   const t = useTranslations("nav");
@@ -32,6 +33,7 @@ export default function Header() {
               <Link
                 key={item.path}
                 href={`/${locale}${item.path === "/" ? "" : item.path}`}
+                onClick={() => trackNavigation(item.label.replace("nav.", ""))}
                 className={`text-sm font-medium transition-colors ${
                   isActive(item.path)
                     ? "text-[#3D49A8]"
@@ -71,7 +73,7 @@ export default function Header() {
                 <Link
                   key={item.path}
                   href={`/${locale}${item.path === "/" ? "" : item.path}`}
-                  onClick={() => setMobileOpen(false)}
+                  onClick={() => { setMobileOpen(false); trackNavigation(item.label.replace("nav.", "")); }}
                   className={`text-sm font-medium px-2 py-2 rounded-lg transition-colors ${
                     isActive(item.path)
                       ? "text-[#3D49A8] bg-primary-50"

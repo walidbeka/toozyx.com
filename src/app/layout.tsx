@@ -1,6 +1,14 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 
+const verification: Record<string, string | number> = {};
+if (siteConfig.verification.google) {
+  verification.google = siteConfig.verification.google;
+}
+if (siteConfig.verification.bing) {
+  verification["msvalidate.01"] = siteConfig.verification.bing;
+}
+
 export const metadata: Metadata = {
   title: {
     default: siteConfig.name,
@@ -49,6 +57,7 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  ...(Object.keys(verification).length > 0 ? { verification } : {}),
 };
 
 export default function RootLayout({

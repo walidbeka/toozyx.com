@@ -65,7 +65,7 @@ export default async function HomePage({ params }: HomePageProps) {
             "@type": "Organization",
             name: "Toozyx",
             url: "https://toozyx.com",
-            logo: "https://toozyx.com/icon.png",
+            logo: "https://toozyx.com/icon.svg",
             description:
               "Toozyx helps companies build better operating systems. We study how organisations work, identify bottlenecks, and design solutions that improve clarity, control, and growth.",
             email: "info@toozyx.com",

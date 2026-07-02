@@ -2,7 +2,7 @@
   <rect width="1200" height="630" fill="white"/>
   <rect width="1200" height="630" fill="url(#bg)"/>
   <rect x="60" y="60" width="140" height="140" rx="28" fill="url(#g)"/>
-  <path d="M100 200V100L160 200L220 100V200" stroke="white" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M100 100l120 120M220 100l-120 120" stroke="white" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
   <text x="240" y="175" font-family="Inter, sans-serif" font-size="80" font-weight="700" fill="#111827">Toozyx</text>
   <text x="60" y="290" font-family="Inter, sans-serif" font-size="36" font-weight="500" fill="#6B7280">Technology That Makes Business Simpler</text>
   <text x="60" y="350" font-family="Inter, sans-serif" font-size="24" font-weight="400" fill="#9CA3AF">Technology Company · Business Solutions · Digital Products</text>

@@ -23,7 +23,7 @@ export default function Logo({ locale, className = "" }: LogoProps) {
       >
         <rect width="32" height="32" rx="8" fill="url(#logo-gradient)" />
         <path
-          d="M10 22V10L16 22L22 10V22"
+          d="M10 10l12 12M22 10l-12 12"
           stroke="white"
           strokeWidth="2.5"
           strokeLinecap="round"

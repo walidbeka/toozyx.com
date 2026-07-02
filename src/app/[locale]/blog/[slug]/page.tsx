@@ -112,7 +112,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             publisher: {
               "@type": "Organization",
               name: "Toozyx",
-              logo: { "@type": "ImageObject", url: "https://toozyx.com/icon.png" },
+              logo: { "@type": "ImageObject", url: "https://toozyx.com/icon.svg" },
             },
             mainEntityOfPage: {
               "@type": "WebPage",

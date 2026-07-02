@@ -6,6 +6,7 @@ interface ButtonProps {
   variant?: "primary" | "outline" | "ghost";
   className?: string;
   external?: boolean;
+  onClick?: () => void;
 }
 
 export default function Button({
@@ -14,6 +15,7 @@ export default function Button({
   variant = "primary",
   className = "",
   external = false,
+  onClick,
 }: ButtonProps) {
   const baseStyles =
     "inline-flex items-center justify-center rounded-xl px-6 py-3 text-sm font-medium transition-all duration-200";
@@ -35,6 +37,7 @@ export default function Button({
         href={href}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={onClick}
         className={classes}
       >
         {children}
@@ -43,7 +46,7 @@ export default function Button({
   }
 
   return (
-    <Link href={href} className={classes}>
+    <Link href={href} onClick={onClick} className={classes}>
       {children}
     </Link>
   );

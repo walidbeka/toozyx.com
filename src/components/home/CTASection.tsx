@@ -1,6 +1,9 @@
+"use client";
+
 import { useTranslations } from "next-intl";
 import Button from "@/components/Button";
 import Container from "@/components/Container";
+import { trackCTA } from "@/lib/analytics";
 
 interface CTASectionProps {
   locale: string;
@@ -22,11 +25,12 @@ export default function CTASection({ locale }: CTASectionProps) {
               {t("description")}
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button href={`/${locale}/products`}>
+              <Button href={`/${locale}/products`} onClick={() => trackCTA("explore_products")}>
                 {t("exploreProducts")}
               </Button>
               <a
                 href={`/${locale}/contact`}
+                onClick={() => trackCTA("contact_us")}
                 className="inline-flex items-center justify-center rounded-xl border-2 border-white/20 text-white px-6 py-3 text-sm font-medium transition-all hover:bg-white/10 hover:border-white/30"
               >
                 {t("contactUs")}

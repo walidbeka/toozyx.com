@@ -6,6 +6,7 @@ import { hasLocale } from "next-intl";
 import "@/app/globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Analytics from "@/components/Analytics";
 import type { Viewport } from "next";
 
 export const viewport: Viewport = {
@@ -37,6 +38,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} dir={dir}>
       <body className="min-h-screen flex flex-col">
+        <Analytics />
         <NextIntlClientProvider messages={messages}>
           <Header />
           <main className="flex-1">{children}</main>

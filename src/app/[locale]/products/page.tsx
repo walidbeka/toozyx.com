@@ -4,6 +4,7 @@ import Section from "@/components/Section";
 import SectionHeader from "@/components/SectionHeader";
 import Container from "@/components/Container";
 import Card from "@/components/Card";
+import TrackedExternalLink from "@/components/TrackedExternalLink";
 import { siteConfig } from "@/config/site";
 import type { Metadata } from "next";
 
@@ -171,10 +172,9 @@ export default async function ProductsPage({ params }: ProductsPageProps) {
                   )
                 )}
               </div>
-              <a
+              <TrackedExternalLink
                 href={urls[i]}
-                target="_blank"
-                rel="noopener noreferrer"
+                label={t(`${key}.name`)}
                 className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-[#3D49A8] to-[#6874E8] text-white px-6 py-3 text-sm font-medium transition-all hover:opacity-90 shadow-lg shadow-primary-500/20"
               >
                 {t(`${key}.cta`)}
@@ -183,7 +183,7 @@ export default async function ProductsPage({ params }: ProductsPageProps) {
                   <polyline points="15 3 21 3 21 9" />
                   <line x1="10" y1="14" x2="21" y2="3" />
                 </svg>
-              </a>
+              </TrackedExternalLink>
             </Card>
           ))}
         </div>

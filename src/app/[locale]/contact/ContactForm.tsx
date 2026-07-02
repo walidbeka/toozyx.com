@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { useState } from "react";
+import { trackFormSubmit } from "@/lib/analytics";
 
 interface ContactFormProps {
   locale: string;
@@ -30,6 +31,7 @@ export default function ContactForm({ locale }: ContactFormProps) {
       if (res.ok) {
         setState("success");
         form.reset();
+        trackFormSubmit("contact");
       } else {
         setState("error");
       }

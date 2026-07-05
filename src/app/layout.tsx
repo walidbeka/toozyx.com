@@ -16,6 +16,13 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   metadataBase: new URL(siteConfig.url),
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    shortcut: { url: "/favicon.svg", type: "image/svg+xml" },
+    apple: { url: "/icon.svg", type: "image/svg+xml" },
+  },
   alternates: {
     canonical: "/",
     languages: {

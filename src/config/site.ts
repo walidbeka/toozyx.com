@@ -3,7 +3,7 @@ export const siteConfig = {
   description:
     "Toozyx helps companies build better operating systems. We study how organisations work, identify bottlenecks, and design solutions that improve clarity, control, and growth.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://toozyx.com",
-  ogImage: `${process.env.NEXT_PUBLIC_SITE_URL || "https://toozyx.com"}/og-image.png`,
+  ogImage: `${process.env.NEXT_PUBLIC_SITE_URL || "https://toozyx.com"}/og-image.svg`,
   ogImageAlt: "Toozyx — Business Systems Company",
   twitterHandle: "@toozyx",
   links: {

@@ -8,7 +8,7 @@ export function localeAlternates(locale: string, path: string) {
   const ar = `/ar${path}`;
   return {
     canonical: `https://toozyx.com${locale === "en" ? en : ar}`,
-    languages: { en: `https://toozyx.com${en}`, ar: `https://toozyx.com${ar}` },
+    languages: { en: `https://toozyx.com${en}`, ar: `https://toozyx.com${ar}`, "x-default": `https://toozyx.com${en}` },
   };
 }
 

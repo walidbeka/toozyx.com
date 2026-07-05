@@ -26,11 +26,11 @@ export async function generateMetadata({
   const localeSuffix = isAr ? " | توزيكس" : " | Toozyx";
 
   return {
-    title: isAr ? "توزيكس" : "Toozyx",
+    title: isAr ? "توزيكس" : { absolute: "Toozyx" },
     description: t("description"),
     alternates: localeAlternates(locale, ""),
     openGraph: {
-      title: isAr ? "توزيكس" : "Toozyx",
+      title: isAr ? "توزيكس" : { absolute: "Toozyx" },
       description: t("description"),
       url: `https://toozyx.com${localePath(locale, "")}`,
       siteName: "Toozyx",
@@ -40,7 +40,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: isAr ? "توزيكس" : "Toozyx",
+      title: isAr ? "توزيكس" : { absolute: "Toozyx" },
       description: t("description"),
       images: [siteConfig.ogImage],
       site: siteConfig.twitterHandle,

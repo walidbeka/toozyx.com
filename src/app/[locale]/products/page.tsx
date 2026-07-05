@@ -22,11 +22,11 @@ export async function generateMetadata({
   const suffix = isAr ? " | توزيكس" : " | Toozyx";
 
   return {
-    title: title + suffix,
+    title: { absolute: title + suffix },
     description: t("description"),
     alternates: localeAlternates(locale, "/products"),
     openGraph: {
-      title: title + suffix,
+      title: { absolute: title + suffix },
       description: t("description"),
             url: `https://toozyx.com${localePath(locale, "/products")}`,
       siteName: "Toozyx",
@@ -36,7 +36,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: title + suffix,
+      title: { absolute: title + suffix },
       description: t("description"),
       images: [siteConfig.ogImage],
       site: siteConfig.twitterHandle,

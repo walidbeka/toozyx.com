@@ -18,9 +18,10 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   icons: {
     icon: [
+      { url: "/favicon.ico", sizes: "any" },
       { url: "/favicon.svg", type: "image/svg+xml" },
     ],
-    shortcut: { url: "/favicon.svg", type: "image/svg+xml" },
+    shortcut: "/favicon.ico",
     apple: { url: "/icon.svg", type: "image/svg+xml" },
   },
   alternates: {

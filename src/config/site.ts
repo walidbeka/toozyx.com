@@ -1,3 +1,17 @@
+export function localePath(locale: string, path: string): string {
+  if (locale === "en") return path || "/";
+  return `/ar${path}`;
+}
+
+export function localeAlternates(locale: string, path: string) {
+  const en = path || "/";
+  const ar = `/ar${path}`;
+  return {
+    canonical: `https://toozyx.com${locale === "en" ? en : ar}`,
+    languages: { en: `https://toozyx.com${en}`, ar: `https://toozyx.com${ar}` },
+  };
+}
+
 export const siteConfig = {
   name: "Toozyx",
   description:

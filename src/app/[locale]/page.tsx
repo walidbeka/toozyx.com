@@ -10,7 +10,7 @@ import MetricsSection from "@/components/home/MetricsSection";
 import ArticlesSection from "@/components/home/ArticlesSection";
 import SecuritySection from "@/components/home/SecuritySection";
 import CTASection from "@/components/home/CTASection";
-import { siteConfig } from "@/config/site";
+import { siteConfig, localeAlternates, localePath } from "@/config/site";
 import type { Metadata } from "next";
 
 interface HomePageProps {
@@ -28,14 +28,11 @@ export async function generateMetadata({
   return {
     title: isAr ? "توزيكس" : "Toozyx",
     description: t("description"),
-    alternates: {
-      canonical: `https://toozyx.com/${locale}`,
-      languages: { en: "https://toozyx.com/en", ar: "https://toozyx.com/ar" },
-    },
+    alternates: localeAlternates(locale, ""),
     openGraph: {
       title: isAr ? "توزيكس" : "Toozyx",
       description: t("description"),
-      url: `https://toozyx.com/${locale}`,
+      url: `https://toozyx.com${localePath(locale, "")}`,
       siteName: "Toozyx",
       locale: isAr ? "ar_SA" : "en_US",
       type: "website",

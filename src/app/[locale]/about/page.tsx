@@ -3,7 +3,7 @@ import Link from "next/link";
 import Section from "@/components/Section";
 import Container from "@/components/Container";
 import Card from "@/components/Card";
-import { siteConfig } from "@/config/site";
+import { siteConfig, localeAlternates, localePath } from "@/config/site";
 import type { Metadata } from "next";
 
 interface AboutPageProps {
@@ -22,14 +22,11 @@ export async function generateMetadata({
   return {
     title: title + suffix,
     description: t("description"),
-    alternates: {
-      canonical: `https://toozyx.com/${locale}/about`,
-      languages: { en: "https://toozyx.com/en/about", ar: "https://toozyx.com/ar/about" },
-    },
+    alternates: localeAlternates(locale, "/about"),
     openGraph: {
       title: title + suffix,
       description: t("description"),
-      url: `https://toozyx.com/${locale}/about`,
+            url: `https://toozyx.com${localePath(locale, "/about")}`,
       siteName: "Toozyx",
       locale: isAr ? "ar_SA" : "en_US",
       type: "website",
@@ -59,8 +56,8 @@ export default async function AboutPage({ params }: AboutPageProps) {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Home", item: `https://toozyx.com/${locale}` },
-              { "@type": "ListItem", position: 2, name: t("title"), item: `https://toozyx.com/${locale}/about` },
+              { "@type": "ListItem", position: 1, name: "Home", item: `https://toozyx.com${localePath(locale, "")}` },
+              { "@type": "ListItem", position: 2, name: t("title"), item: `https://toozyx.com${localePath(locale, "/about")}` },
             ],
           }),
         }}
@@ -73,7 +70,7 @@ export default async function AboutPage({ params }: AboutPageProps) {
             "@type": "AboutPage",
             name: t("title"),
             description: t("description"),
-            url: `https://toozyx.com/${locale}/about`,
+      url: `https://toozyx.com${localePath(locale, "/about")}`,
             mainEntity: {
               "@type": "Organization",
               name: "Toozyx",

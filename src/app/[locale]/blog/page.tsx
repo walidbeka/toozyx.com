@@ -3,7 +3,7 @@ import Link from "next/link";
 import Section from "@/components/Section";
 import SectionHeader from "@/components/SectionHeader";
 import Card from "@/components/Card";
-import { siteConfig } from "@/config/site";
+import { siteConfig, localeAlternates, localePath } from "@/config/site";
 import type { Metadata } from "next";
 
 interface BlogPageProps {
@@ -22,14 +22,11 @@ export async function generateMetadata({
   return {
     title: title + suffix,
     description: t("description"),
-    alternates: {
-      canonical: `https://toozyx.com/${locale}/blog`,
-      languages: { en: "https://toozyx.com/en/blog", ar: "https://toozyx.com/ar/blog" },
-    },
+    alternates: localeAlternates(locale, "/blog"),
     openGraph: {
       title: title + suffix,
       description: t("description"),
-      url: `https://toozyx.com/${locale}/blog`,
+            url: `https://toozyx.com${localePath(locale, "/blog")}`,
       siteName: "Toozyx",
       locale: isAr ? "ar_SA" : "en_US",
       type: "website",
@@ -91,8 +88,8 @@ export default async function BlogPage({ params }: BlogPageProps) {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Home", item: `https://toozyx.com/${locale}` },
-              { "@type": "ListItem", position: 2, name: t("title"), item: `https://toozyx.com/${locale}/blog` },
+              { "@type": "ListItem", position: 1, name: "Home", item: `https://toozyx.com${localePath(locale, "")}` },
+              { "@type": "ListItem", position: 2, name: t("title"), item: `https://toozyx.com${localePath(locale, "/blog")}` },
             ],
           }),
         }}
@@ -105,7 +102,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
             "@type": "Blog",
             name: t("title"),
             description: t("description"),
-            url: `https://toozyx.com/${locale}/blog`,
+      url: `https://toozyx.com${localePath(locale, "/blog")}`,
           }),
         }}
       />

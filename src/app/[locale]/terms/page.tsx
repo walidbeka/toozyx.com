@@ -1,7 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import Section from "@/components/Section";
 import Container from "@/components/Container";
-import { siteConfig } from "@/config/site";
+import { siteConfig, localeAlternates, localePath } from "@/config/site";
 import type { Metadata } from "next";
 
 interface TermsPageProps {
@@ -20,14 +20,11 @@ export async function generateMetadata({
   return {
     title: title + suffix,
     description: isAr ? "شروط خدمة توزيكس" : "Toozyx Terms of Service — rules and guidelines for using Toozyx products and services.",
-    alternates: {
-      canonical: `https://toozyx.com/${locale}/terms`,
-      languages: { en: "https://toozyx.com/en/terms", ar: "https://toozyx.com/ar/terms" },
-    },
+    alternates: localeAlternates(locale, "/terms"),
     openGraph: {
       title: title + suffix,
       description: isAr ? "شروط خدمة توزيكس" : "Toozyx Terms of Service — rules and guidelines for using Toozyx products and services.",
-      url: `https://toozyx.com/${locale}/terms`,
+      url: `https://toozyx.com${localePath(locale, "/terms")}`,
       siteName: "Toozyx",
       locale: isAr ? "ar_SA" : "en_US",
       type: "website",
@@ -55,8 +52,8 @@ export default async function TermsPage({ params }: TermsPageProps) {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Home", item: `https://toozyx.com/${locale}` },
-              { "@type": "ListItem", position: 2, name: t("title"), item: `https://toozyx.com/${locale}/terms` },
+              { "@type": "ListItem", position: 1, name: "Home", item: `https://toozyx.com${localePath(locale, "")}` },
+              { "@type": "ListItem", position: 2, name: t("title"), item: `https://toozyx.com${localePath(locale, "/terms")}` },
             ],
           }),
         }}

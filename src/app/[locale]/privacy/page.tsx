@@ -1,7 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import Section from "@/components/Section";
 import Container from "@/components/Container";
-import { siteConfig } from "@/config/site";
+import { siteConfig, localeAlternates, localePath } from "@/config/site";
 import type { Metadata } from "next";
 
 interface PrivacyPageProps {
@@ -20,14 +20,11 @@ export async function generateMetadata({
   return {
     title: title + suffix,
     description: isAr ? "سياسة الخصوصية لشركة توزيكس" : "Toozyx Privacy Policy — how we collect, use, and protect your information.",
-    alternates: {
-      canonical: `https://toozyx.com/${locale}/privacy`,
-      languages: { en: "https://toozyx.com/en/privacy", ar: "https://toozyx.com/ar/privacy" },
-    },
+    alternates: localeAlternates(locale, "/privacy"),
     openGraph: {
       title: title + suffix,
       description: isAr ? "سياسة الخصوصية لشركة توزيكس" : "Toozyx Privacy Policy — how we collect, use, and protect your information.",
-      url: `https://toozyx.com/${locale}/privacy`,
+      url: `https://toozyx.com${localePath(locale, "/privacy")}`,
       siteName: "Toozyx",
       locale: isAr ? "ar_SA" : "en_US",
       type: "website",
@@ -55,8 +52,8 @@ export default async function PrivacyPage({ params }: PrivacyPageProps) {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Home", item: `https://toozyx.com/${locale}` },
-              { "@type": "ListItem", position: 2, name: t("title"), item: `https://toozyx.com/${locale}/privacy` },
+              { "@type": "ListItem", position: 1, name: "Home", item: `https://toozyx.com${localePath(locale, "")}` },
+              { "@type": "ListItem", position: 2, name: t("title"), item: `https://toozyx.com${localePath(locale, "/privacy")}` },
             ],
           }),
         }}

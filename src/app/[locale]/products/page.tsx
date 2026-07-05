@@ -5,7 +5,7 @@ import SectionHeader from "@/components/SectionHeader";
 import Container from "@/components/Container";
 import Card from "@/components/Card";
 import TrackedExternalLink from "@/components/TrackedExternalLink";
-import { siteConfig } from "@/config/site";
+import { siteConfig, localeAlternates, localePath } from "@/config/site";
 import type { Metadata } from "next";
 
 interface ProductsPageProps {
@@ -24,14 +24,11 @@ export async function generateMetadata({
   return {
     title: title + suffix,
     description: t("description"),
-    alternates: {
-      canonical: `https://toozyx.com/${locale}/products`,
-      languages: { en: "https://toozyx.com/en/products", ar: "https://toozyx.com/ar/products" },
-    },
+    alternates: localeAlternates(locale, "/products"),
     openGraph: {
       title: title + suffix,
       description: t("description"),
-      url: `https://toozyx.com/${locale}/products`,
+            url: `https://toozyx.com${localePath(locale, "/products")}`,
       siteName: "Toozyx",
       locale: isAr ? "ar_SA" : "en_US",
       type: "website",
@@ -91,8 +88,8 @@ export default async function ProductsPage({ params }: ProductsPageProps) {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Home", item: `https://toozyx.com/${locale}` },
-              { "@type": "ListItem", position: 2, name: t("title"), item: `https://toozyx.com/${locale}/products` },
+              { "@type": "ListItem", position: 1, name: "Home", item: `https://toozyx.com${localePath(locale, "")}` },
+              { "@type": "ListItem", position: 2, name: t("title"), item: `https://toozyx.com${localePath(locale, "/products")}` },
             ],
           }),
         }}
@@ -105,7 +102,7 @@ export default async function ProductsPage({ params }: ProductsPageProps) {
             "@type": "CollectionPage",
             name: t("title"),
             description: t("description"),
-            url: `https://toozyx.com/${locale}/products`,
+      url: `https://toozyx.com${localePath(locale, "/products")}`,
             mainEntity: {
               "@type": "ItemList",
               itemListElement: productKeys.map((key, i) => ({

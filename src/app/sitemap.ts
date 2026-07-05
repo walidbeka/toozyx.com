@@ -22,36 +22,44 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
   const now = new Date();
 
-  for (const locale of locales) {
-    for (const route of staticRoutes) {
+  for (const route of staticRoutes) {
+    const enUrl = `https://toozyx.com${route}`;
+    const arUrl = `https://toozyx.com/ar${route}`;
+    entries.push({
+      url: enUrl,
+      lastModified: now,
+      changeFrequency: route === "" ? "weekly" : "monthly",
+      priority: route === "" ? 1.0 : 0.8,
+      alternates: { languages: { en: enUrl, ar: arUrl } },
+    });
+    if (route !== "") {
       entries.push({
-        url: `https://toozyx.com/${locale}${route}`,
+        url: arUrl,
         lastModified: now,
-        changeFrequency: route === "" ? "weekly" : "monthly",
-        priority: route === "" ? 1.0 : 0.8,
-        alternates: {
-          languages: {
-            en: `https://toozyx.com/en${route}`,
-            ar: `https://toozyx.com/ar${route}`,
-          },
-        },
-      });
-    }
-
-    for (const [slug, date] of Object.entries(blogPosts)) {
-      entries.push({
-        url: `https://toozyx.com/${locale}/blog/${slug}`,
-        lastModified: new Date(date),
         changeFrequency: "monthly",
-        priority: 0.6,
-        alternates: {
-          languages: {
-            en: `https://toozyx.com/en/blog/${slug}`,
-            ar: `https://toozyx.com/ar/blog/${slug}`,
-          },
-        },
+        priority: 0.8,
+        alternates: { languages: { en: enUrl, ar: arUrl } },
       });
     }
+  }
+
+  for (const [slug, date] of Object.entries(blogPosts)) {
+    const enUrl = `https://toozyx.com/blog/${slug}`;
+    const arUrl = `https://toozyx.com/ar/blog/${slug}`;
+    entries.push({
+      url: enUrl,
+      lastModified: new Date(date),
+      changeFrequency: "monthly",
+      priority: 0.6,
+      alternates: { languages: { en: enUrl, ar: arUrl } },
+    });
+    entries.push({
+      url: arUrl,
+      lastModified: new Date(date),
+      changeFrequency: "monthly",
+      priority: 0.6,
+      alternates: { languages: { en: enUrl, ar: arUrl } },
+    });
   }
 
   return entries;

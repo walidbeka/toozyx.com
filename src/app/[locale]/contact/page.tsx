@@ -3,7 +3,7 @@ import Section from "@/components/Section";
 import Container from "@/components/Container";
 import Card from "@/components/Card";
 import ContactForm from "./ContactForm";
-import { siteConfig } from "@/config/site";
+import { siteConfig, localeAlternates, localePath } from "@/config/site";
 import type { Metadata } from "next";
 
 interface ContactPageProps {
@@ -22,14 +22,11 @@ export async function generateMetadata({
   return {
     title: title + suffix,
     description: t("description"),
-    alternates: {
-      canonical: `https://toozyx.com/${locale}/contact`,
-      languages: { en: "https://toozyx.com/en/contact", ar: "https://toozyx.com/ar/contact" },
-    },
+    alternates: localeAlternates(locale, "/contact"),
     openGraph: {
       title: title + suffix,
       description: t("description"),
-      url: `https://toozyx.com/${locale}/contact`,
+            url: `https://toozyx.com${localePath(locale, "/contact")}`,
       siteName: "Toozyx",
       locale: isAr ? "ar_SA" : "en_US",
       type: "website",
@@ -59,8 +56,8 @@ export default async function ContactPage({ params }: ContactPageProps) {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Home", item: `https://toozyx.com/${locale}` },
-              { "@type": "ListItem", position: 2, name: t("title"), item: `https://toozyx.com/${locale}/contact` },
+              { "@type": "ListItem", position: 1, name: "Home", item: `https://toozyx.com${localePath(locale, "")}` },
+              { "@type": "ListItem", position: 2, name: t("title"), item: `https://toozyx.com${localePath(locale, "/contact")}` },
             ],
           }),
         }}
@@ -73,7 +70,7 @@ export default async function ContactPage({ params }: ContactPageProps) {
             "@type": "ContactPage",
             name: t("title"),
             description: t("description"),
-            url: `https://toozyx.com/${locale}/contact`,
+      url: `https://toozyx.com${localePath(locale, "/contact")}`,
             mainEntity: {
               "@type": "Organization",
               name: "Toozyx",

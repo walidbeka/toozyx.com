@@ -2,7 +2,7 @@ import { getTranslations } from "next-intl/server";
 import Link from "next/link";
 import Section from "@/components/Section";
 import Container from "@/components/Container";
-import { siteConfig } from "@/config/site";
+import { siteConfig, localeAlternates, localePath } from "@/config/site";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
@@ -47,17 +47,11 @@ export async function generateMetadata({
   return {
     title: article.title,
     description: article.content.slice(0, 160),
-    alternates: {
-      canonical: `https://toozyx.com/${locale}/blog/${slug}`,
-      languages: {
-        en: `https://toozyx.com/en/blog/${slug}`,
-        ar: `https://toozyx.com/ar/blog/${slug}`,
-      },
-    },
+    alternates: localeAlternates(locale, `/blog/${slug}`),
     openGraph: {
       title: article.title,
       description: article.content.slice(0, 160),
-      url: `https://toozyx.com/${locale}/blog/${slug}`,
+      url: `https://toozyx.com${localePath(locale, `/blog/${slug}`)}`,
       siteName: "Toozyx",
       locale: isAr ? "ar_SA" : "en_US",
       type: "article",
@@ -116,7 +110,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             },
             mainEntityOfPage: {
               "@type": "WebPage",
-              "@id": `https://toozyx.com/${locale}/blog/${slug}`,
+              "@id": `https://toozyx.com${localePath(locale, `/blog/${slug}`)}`,
             },
           }),
         }}
@@ -128,9 +122,9 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Home", item: `https://toozyx.com/${locale}` },
-              { "@type": "ListItem", position: 2, name: t("title"), item: `https://toozyx.com/${locale}/blog` },
-              { "@type": "ListItem", position: 3, name: article.title, item: `https://toozyx.com/${locale}/blog/${slug}` },
+              { "@type": "ListItem", position: 1, name: "Home", item: `https://toozyx.com${localePath(locale, "")}` },
+              { "@type": "ListItem", position: 2, name: t("title"), item: `https://toozyx.com${localePath(locale, "/blog")}` },
+              { "@type": "ListItem", position: 3, name: article.title, item: `https://toozyx.com${localePath(locale, `/blog/${slug}`)}` },
             ],
           }),
         }}
